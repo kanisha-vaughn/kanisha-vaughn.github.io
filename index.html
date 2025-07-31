@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Freelance Professional</title>
+    <title>Kanisha V. - Consultant</title>
     <style>
+        :root {
+            --primary-blue: #3b73d9;
+            --pale-blue: #f0f8ff;
+            --contact-blue: #e6f3ff;
+            --coral: #ff6b6b;
+            --pale-grey: #f8f9fa;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -26,8 +34,11 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('1647030284562.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color:white;
             padding: 2rem 0;
             text-align: center;
         }
@@ -72,7 +83,7 @@
         }
 
         nav a:hover {
-            color: #667eea;
+            color: var(--primary-blue);
         }
 
         /* Sections */
@@ -86,22 +97,39 @@
         }
 
         #skills {
-            background-color: #f8f9fa;
+            background-color: var(--pale-grey);
         }
 
         #services {
-            background-color: #f1f3f4;
+            background-color: #ffffff;
         }
 
         #portfolio {
-            background-color: #e8f0fe;
+            background-color: var(--pale-grey);
+        }
+
+        #contact {
+            background: linear-gradient(135deg, var(--primary-blue), rgba(66, 133, 244, 0.8));
+            color: white;
+        }
+
+        #contact .section-title {
+            color: white;
+        }
+
+        #contact p {
+            color: white;
+        }
+
+        #contact strong {
+            color: white;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: var(--coral);
         }
 
         /* About Section */
@@ -120,37 +148,42 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
+            background-image: url('DDAC3FA1-2BA6-40EB-9B6E-541CF7DB46B5_1_105_c.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 4px solid var(--primary-blue);
             margin: 0 auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .about-text h3 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            color: #667eea;
+            color: var(--primary-blue);
         }
 
         /* Skills Section */
         .skills-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
 
         .skill-category {
             padding: 2.5rem;
-            margin-bottom: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .skill-category h3 {
-            color: #667eea;
+            color: var(--primary-blue);
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
-            border-bottom: 2px solid #f0f0f0;
+            border-bottom: 2px solid var(--primary-blue);
             padding-bottom: 0.5rem;
             text-align: center;
         }
@@ -163,17 +196,22 @@
         }
 
         .skill-tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #6b8dd6, #b5a8d9);
             color: white;
             padding: 0.5rem 1rem;
-            border-radius: 20px;
+            border-radius: 25px;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: none;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
 
         .skill-tag:hover {
-            transform: translateY(-2px);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, #b5a8d9, #6b8dd6);
         }
 
         /* Services Section */
@@ -187,17 +225,18 @@
         .service-card {
             padding: 2rem;
             border-radius: 10px;
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s;
+            background: white;
+            border-left: 4px solid var(--primary-blue);
+            transition: all 0.3s;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(66, 133, 244, 0.2);
         }
 
         .service-card h3 {
-            color: #667eea;
+            color: var(--primary-blue);
             margin-bottom: 1rem;
         }
 
@@ -277,7 +316,7 @@
 
         .close:hover,
         .close:focus {
-            color: #667eea;
+            color: var(--primary-blue);
             text-decoration: none;
         }
 
@@ -292,10 +331,13 @@
             justify-content: center;
             color: white;
             font-size: 1.5rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .modal h2 {
-            color: #667eea;
+            color: var(--coral);
             margin-bottom: 1rem;
         }
 
@@ -308,7 +350,7 @@
         }
 
         .tech-stack h4 {
-            color: #667eea;
+            color: var(--primary-blue);
             margin-bottom: 0.5rem;
         }
 
@@ -333,7 +375,7 @@
 
         .project-link {
             display: inline-block;
-            background: #667eea;
+            background: var(--primary-blue);
             color: white;
             padding: 0.7rem 1.5rem;
             border-radius: 5px;
@@ -343,13 +385,13 @@
         }
 
         .project-link:hover {
-            background: #5a67d8;
+            background: var(--coral);
         }
 
         /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: var(--contact-blue);
+            color: #333;
         }
 
         .contact-content {
@@ -358,34 +400,27 @@
             margin: 0 auto;
         }
 
-        .contact-form {
-            display: grid;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .contact-form button {
+        .contact-button {
+            display: inline-block;
             padding: 1rem 2rem;
-            background: white;
-            color: #667eea;
+            background: var(--coral);
+            color: white;
             border: none;
             border-radius: 5px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-decoration: none;
+            margin-top: 2rem;
         }
 
-        .contact-form button:hover {
+        .contact-button:hover {
+            background: var(--primary-blue);
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            color: white;
         }
 
         /* Footer */
@@ -400,6 +435,15 @@
         @media (max-width: 768px) {
             .header-content h1 {
                 font-size: 2rem;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .skill-category {
+                padding: 1.5rem;
             }
 
             .about-content {
@@ -422,8 +466,8 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>Your Name</h1>
-                <p>Professional Freelancer | Your Specialty Here</p>
+                <h1>Kanisha V.</h1>
+                <p>Analytics & Project Management Consultant | Turning Data Into Greater Impact</p>
             </div>
         </div>
     </header>
@@ -442,18 +486,18 @@
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">Turning Complex Problems Into Clear Solutions</h2>
             <div class="about-content">
                 <div class="profile-image">
-                    YN
+                    <!-- Your photo will appear here -->
                 </div>
                 <div class="about-text">
-                    <h3>Professional Excellence</h3>
-                    <p>Welcome! I'm a dedicated freelance professional with [X] years of experience in [your field]. I specialize in delivering high-quality [services] that help businesses and individuals achieve their goals.</p>
+                    <h3>About Me</h3>
+                    <p>With 7 years of experience in analytics and project management, I bring a unique perspective to data-driven problem solving. My background in cognitive science and neural computation has taught me not just how to analyze data, but how to present it in ways that truly resonate with human decision-making.</p>
                     <br>
-                    <p>My approach combines technical expertise with creative problem-solving to provide solutions that not only meet your requirements but exceed your expectations. I believe in clear communication, timely delivery, and building long-term professional relationships.</p>
+                    <p>I'm passionate about working with nonprofits and small organizations because these are often the groups doing the most important work while being the most resource-constrained. They need smart, efficient solutions that maximize impact without breaking the budget – and that's exactly what I aim to deliver.</p>
                     <br>
-                    <p>When I'm not working on client projects, I enjoy [personal interests] and continuously learning new skills to stay current with industry trends.</p>
+                    <p>My approach is rooted in a simple principle: break every problem down to its smallest components. Just like writing clean code, successful projects start with truly understanding what the client is trying to accomplish and why. Every project is a puzzle waiting to be solved, and I believe every puzzle has a solution. Whether you need to streamline operations, make sense of your data, or document complex processes, I'm here to help you turn challenges into opportunities for greater impact.</p>
                 </div>
             </div>
         </div>
@@ -467,14 +511,16 @@
                     <h3>Data Analytics & Visualization</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">Excel</span>
                         <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Google Analytics</span>
+                        <span class="skill-tag">Looker Studio</span>
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Google Sheets</span>
+                        <span class="skill-tag">Data Cleaning/Preprocessing</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Survey Analysis</span>
                     </div>
                 </div>
                 
@@ -486,37 +532,37 @@
                         <span class="skill-tag">Monday.com</span>
                         <span class="skill-tag">Jira</span>
                         <span class="skill-tag">Trello</span>
-                        <span class="skill-tag">MS Project</span>
-                        <span class="skill-tag">Gantt Charts</span>
-                        <span class="skill-tag">Risk Management</span>
+                        <span class="skill-tag">Kanban</span>
+                        <span class="skill-tag">Workflow Automation</span>
+                        <span class="skill-tag">Change Management</span>
+                        <span class="skill-tag">Cross-Functional Team Leadership</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
                     <h3>Technical Writing & Documentation</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Technical Documentation</span>
-                        <span class="skill-tag">API Documentation</span>
-                        <span class="skill-tag">User Manuals</span>
                         <span class="skill-tag">Process Documentation</span>
-                        <span class="skill-tag">Confluence</span>
+                        <span class="skill-tag">Standard Operating Procedures</span>
+                        <span class="skill-tag">Data Documentation</span>
+                        <span class="skill-tag">Training Materials</span>
+                        <span class="skill-tag">Technical Documentation</span>
+                        <span class="skill-tag">Research & Analysis</span>
                         <span class="skill-tag">Notion</span>
-                        <span class="skill-tag">Markdown</span>
-                        <span class="skill-tag">Content Strategy</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
                     <h3>Tools & Technologies</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">Slack</span>
-                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Google Cloud</span>
                         <span class="skill-tag">Google Workspace</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Miro</span>
                         <span class="skill-tag">Zapier</span>
-                        <span class="skill-tag">AWS Basics</span>
+                        <span class="skill-tag">IFTTT</span>
+                        <span class="skill-tag">API Integration</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
                     </div>
                 </div>
             </div>
@@ -528,16 +574,37 @@
             <h2 class="section-title">My Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Service 1</h3>
-                    <p>Detailed description of your first service. Explain what you offer, the benefits to clients, and what makes your approach unique.</p>
+                    <h3>Data Analytics & Insights</h3>
+                    <p>Transform your raw data into clear, actionable insights that drive better decision-making.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Data cleanup and ETL pipeline development</li>
+                        <li>Dashboard creation and data visualizations</li>
+                        <li>Survey analysis and donor analytics</li>
+                        <li>Program evaluation and impact reporting</li>
+                        <li>Making complex data digestible for stakeholders</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>Service 2</h3>
-                    <p>Description of your second service. Include any specific tools, technologies, or methodologies you use to deliver excellent results.</p>
+                    <h3>Technical Project Management</h3>
+                    <p>Lead your short to medium-term projects with precision and efficiency, ensuring successful delivery within scope and budget.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Technical project management for 3-12 month initiatives</li>
+                        <li>Workflow automation in Jira, Asana, and other PM tools</li>
+                        <li>Project management tool setup and configuration</li>
+                        <li>Milestone development and timeline creation</li>
+                        <li>Cross-functional team coordination and leadership</li>
+                    </ul>
                 </div>
                 <div class="service-card">
-                    <h3>Service 3</h3>
-                    <p>Your third service offering. Highlight your expertise and how you can help clients solve their specific challenges.</p>
+                    <h3>Documentation & Knowledge Management</h3>
+                    <p>Capture and organize your institutional knowledge to ensure continuity, consistency, and scalable operations.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Standard Operating Procedures (SOPs) creation</li>
+                        <li>Research reports and strategic briefs</li>
+                        <li>Process documentation and workflow mapping</li>
+                        <li>Data documentation and methodology guides</li>
+                        <li>Knowledge base setup and organization in Notion</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -548,30 +615,58 @@
             <h2 class="section-title">Portfolio</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item" onclick="openModal('project1')">
-                    <div class="portfolio-image">
-                        Project Preview
+                    <div class="portfolio-image" style="background-image: url('Dashboard Page 1 Screenshot Example.jpeg'); background-size: cover; background-position: center;">
                     </div>
                     <div class="portfolio-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Interactive dashboard for sales performance analysis with real-time data visualization.</p>
+                        <h3>EdTech Implementation Analytics Dashboard</h3>
+                        <div class="skill-tags-portfolio">
+                            <span style="background-color: #4285f4; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; display: inline-block;">Data Visualization</span>
+                        </div>
+                        <p>Dynamic reporting system that transformed quarterly reports into daily insights for K-8 student intervention platform.</p>
                     </div>
                 </div>
                 <div class="portfolio-item" onclick="openModal('project2')">
-                    <div class="portfolio-image">
-                        Project Preview
+                    <div class="portfolio-image" style="background-image: url('PM Word Cloud.png'); background-size: cover; background-position: center;">
                     </div>
                     <div class="portfolio-content">
-                        <h3>Project Management System</h3>
-                        <p>Custom workflow automation system that reduced project delivery time by 40%.</p>
+                        <h3>Nonprofit Project Management System Implementation</h3>
+                        <div class="skill-tags-portfolio">
+                            <span style="background-color: #4285f4; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; display: inline-block;">Project Management</span>
+                        </div>
+                        <p>7-month comprehensive rollout of Asana system for nonprofit managing 30-40 concurrent campaigns, replacing scattered Google Docs and Excel tracking.</p>
                     </div>
                 </div>
                 <div class="portfolio-item" onclick="openModal('project3')">
-                    <div class="portfolio-image">
-                        Project Preview
+                    <div class="portfolio-image" style="background-image: url('AI Election Image.png'); background-size: cover; background-position: center;">
                     </div>
                     <div class="portfolio-content">
-                        <h3>Technical Documentation Portal</h3>
-                        <p>Comprehensive knowledge base with search functionality and user-friendly navigation.</p>
+                        <h3>Generative AI in 2024 Election Research Brief</h3>
+                        <div class="skill-tags-portfolio">
+                            <span style="background-color: #4285f4; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; display: inline-block;">Technical Writing</span>
+                        </div>
+                        <p>Policy research brief analyzing AI threats to election security, examining competing perspectives from Brookings Institute and Leadership Conference on voter suppression and civil rights implications.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('project4')">
+                    <div class="portfolio-image" style="background-image: url('Voting HUD Thumbnail.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Voting Heads Up Dashboard</h3>
+                        <div class="skill-tags-portfolio">
+                            <span style="background-color: #4285f4; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; display: inline-block;">Data Visualization</span>
+                        </div>
+                        <p>Interactive Tableau dashboard providing high-level overview of key voting metrics across states for quick and easy oversight by civic organizations.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('project5')">
+                    <div class="portfolio-image" style="background-image: url('pacman.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Effects of Fear States on Breadth of Attention</h3>
+                        <div class="skill-tags-portfolio">
+                            <span style="background-color: #4285f4; color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; display: inline-block;">Research</span>
+                        </div>
+                        <p>Published research in IMPULSE examining how passive and active threats affect visual attention using Pac-Man maze simulations with 30 human participants.</p>
                     </div>
                 </div>
             </div>
@@ -584,16 +679,12 @@
                 <h2 class="section-title">Get In Touch</h2>
                 <p>Ready to start your next project? I'd love to hear about your ideas and discuss how we can work together to bring them to life.</p>
                 
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Project Type">
-                    <textarea rows="5" placeholder="Tell me about your project..." required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+                <a href="mailto:email@email.com?subject=Project Inquiry&body=Hi, I'd like to discuss a project with you." class="contact-button">
+                    Send Message
+                </a>
                 
                 <p style="margin-top: 2rem;">
-                    Or reach me directly at: <strong>your.email@example.com</strong>
+                    Or reach me directly at: <strong>email@email.com</strong>
                 </p>
             </div>
         </div>
@@ -611,7 +702,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Kanisha V. All rights reserved.</p>
         </div>
     </footer>
 
@@ -626,62 +717,93 @@
             });
         });
 
-        // Simple form handling (you'll need a backend service for actual email sending)
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            this.reset();
-        });
+
 
         // Project data
         const projectData = {
             project1: {
-                title: "Data Analytics Dashboard",
-                image: "Dashboard Screenshot",
-                description: "A comprehensive sales performance dashboard that provides real-time insights into revenue, customer acquisition, and market trends. Built with interactive visualizations and automated reporting features.",
+                title: "EdTech Implementation Analytics Dashboard",
+                image: "Dashboard Page 1 Screenshot Example.jpeg",
+                description: "Comprehensive analytics solution for a K-8 student intervention platform that helps struggling students succeed through the MTSS process. Analyzed implementation success indicators and usage fidelity across intervention managers, teachers, and parents.",
                 details: [
-                    "Processed and analyzed over 500K data points daily",
-                    "Reduced reporting time from 8 hours to 15 minutes",
-                    "Increased data accuracy by 95%",
-                    "Enabled data-driven decision making across 5 departments"
+                    "Transformed quarterly reporting into daily dynamic insights using Looker Data Studio",
+                    "Analyzed complex education data including usage statistics, student assessments, and fidelity metrics",
+                    "Processed and cleaned data directly from client database using SQL",
+                    "Identified key indicators of successful customer platform implementation",
+                    "Dashboard was eventually embedded directly into the customer platform"
                 ],
-                techStack: ["Python", "Tableau", "SQL", "AWS", "Excel"],
+                techStack: ["SQL", "Looker Data Studio", "Database Integration", "Data Cleaning", "Education Analytics"],
                 links: {
-                    demo: "#",
-                    github: "#"
+                    full_preview: "Sample Dashboard - Redacted.pdf"
                 }
             },
             project2: {
-                title: "Project Management System",
-                image: "PM System Interface",
-                description: "Custom workflow automation system designed to streamline project delivery processes. Features include task automation, team collaboration tools, and performance tracking.",
+                title: "Nonprofit Project Management System Implementation",
+                image: "PM Word Cloud.png",
+                description: "Comprehensive 7-month project to implement Asana project management system for a nonprofit organization managing 30-40 concurrent campaigns. Replaced scattered Google Docs and Excel tracking with centralized, automated workflows and high-level reporting capabilities.",
                 details: [
-                    "Reduced project delivery time by 40%",
-                    "Automated 80% of routine administrative tasks",
-                    "Improved team collaboration and communication",
-                    "Integrated with existing tools (Slack, Jira, Google Workspace)"
+                    "Conducted comprehensive needs assessment and tool evaluation with organizational working group",
+                    "Built and configured 30-40 Asana campaign projects with automated workflows and integrations",
+                    "Created automated approval process for new campaign launches and executive director escalations",
+                    "Implemented automatic calendar syncing between Asana campaigns, tasks, and organizational calendars",
+                    "Designed and delivered project management training using 'train the trainer' approach",
+                    "Created interactive dashboard for high-level campaign overview and progress tracking",
+                    "Established ongoing accountability through weekly check-ins and feedback loops with working group"
                 ],
-                techStack: ["Asana API", "Zapier", "Google Sheets", "Python", "Slack"],
+                techStack: ["Asana", "Workflow Automation", "Calendar Integration", "Approval Workflows", "Dashboard Creation", "Change Management", "Training Design"],
                 links: {
-                    demo: "#",
-                    case_study: "#"
+                    sample_training: "Asana Training Sample - 2024-1.pdf"
                 }
             },
             project3: {
-                title: "Technical Documentation Portal",
-                image: "Documentation Portal",
-                description: "A user-friendly knowledge base system with advanced search functionality, version control, and collaborative editing features. Designed to centralize technical documentation for development teams.",
+                title: "Generative AI in 2024 Election Research Brief",
+                image: "AI Election Image.png",
+                description: "Research brief analyzing the impact of generative AI on 2024 election security, examining competing perspectives from policy research organizations and civil rights groups. Demonstrates ability to synthesize complex, multi-stakeholder viewpoints into clear, actionable policy analysis.",
                 details: [
-                    "Centralized documentation for 50+ team members",
-                    "Implemented advanced search with 95% accuracy",
-                    "Reduced time to find information by 60%",
-                    "Created standardized documentation templates"
+                    "Analyzed documented cases of AI voter suppression, including New Hampshire robocalls and Slovakia election interference",
+                    "Conducted comparative analysis of policy positions from The Brookings Institute and The Leadership Conference",
+                    "Examined AI threats to election security and minority voting rights across multiple election cycles",
+                    "Synthesized competing perspectives from policy research organizations and civil rights groups into actionable insights",
+                    "Produced clear, evidence-based policy brief that informs strategic decision-making on AI governance"
                 ],
-                techStack: ["Confluence", "Notion", "Markdown", "Git", "JavaScript"],
+                techStack: ["Research & Analysis", "Policy Writing", "Technical Documentation", "Process Documentation", "Training Materials", "Notion"],
                 links: {
-                    demo: "#",
-                    documentation: "#"
+                    research_brief: "The Current State of Generative AI in the 2024 Election Year-3.pdf"
                 }
+            },
+            project4: {
+                title: "Election Monitoring Heads Up Dashboard",
+                image: "https://public.tableau.com/static/images/El/ElectionMonitoringHeadsUpDashboard/HeadsUp/4_3.png",
+                description: "Interactive Tableau dashboard designed for nonprofit election monitoring organizations. Provides high-level overview of key monitoring metrics across states, enabling quick identification of important trends and issues requiring attention.",
+                details: [
+                    "Created comprehensive state-by-state election monitoring overview for nonprofit organization",
+                    "Designed intuitive interface for quick identification of key metrics and trends across multiple states",
+                    "Built interactive filtering and drill-down capabilities for detailed analysis",
+                    "Enabled real-time monitoring and rapid response to emerging election-related issues",
+                    "Published live dashboard on Tableau Public for organizational access and transparency"
+                ],
+                techStack: ["Tableau", "Data Visualization", "Interactive Dashboards", "Election Data", "Nonprofit Analytics"],
+                links: {
+                    live_dashboard: "https://public.tableau.com/app/profile/kanisha.vaughn1976/viz/ElectionMonitoringHeadsUpDashboard/HeadsUp"
+                }
+            }
+        };
+
+        // Add project5 separately to avoid syntax issues
+        projectData.project5 = {
+            title: "Effects of Fear States on Breadth of Attention",
+            image: "pacman.png",
+            description: "Peer-reviewed experimental research published in IMPULSE - The Premier Undergraduate Neuroscience Journal. Investigated how passive and active threats influence visual attention using innovative Pac-Man maze simulations with human participants.",
+            details: [
+                "Conducted experimental research with 30 human participants using within-subjects design",
+                "Designed innovative Pac-Man maze simulations to elicit post-encounter and circa-strike fear states",
+                "Measured visual attention breadth through central and peripheral stimulus response tasks",
+                "Found significant differences: active threats narrowed attention while passive threats broadened attention",
+                "Published findings in peer-reviewed undergraduate neuroscience journal with full methodology and statistical analysis"
+            ],
+            techStack: ["Data Analytics", "Research & Analysis", "Unity", "Python", "Experimental Design", "Statistical Analysis", "Human Subjects Research", "Cognitive Science", "Data Collection", "Academic Writing"],
+            links: {
+                published_paper: "https://impulse.pubpub.org/pub/f1tvzp6t/release/1"
             }
         };
 
@@ -691,9 +813,15 @@
             const modalContent = document.getElementById('modalContent');
             const project = projectData[projectId];
 
+            if (!project) {
+                alert('Error: Project ' + projectId + ' not found. Available projects: ' + Object.keys(projectData).join(', '));
+                return;
+            }
+
             modalContent.innerHTML = `
                 <h2>${project.title}</h2>
-                <div class="modal-project-image">${project.image}</div>
+                <div class="modal-project-image" style="background-image: url('${project.image}');">
+                </div>
                 <div class="project-details">
                     <p><strong>Overview:</strong> ${project.description}</p>
                     <h4>Key Achievements:</h4>
@@ -708,9 +836,15 @@
                     </div>
                 </div>
                 <div class="project-links">
-                    ${Object.entries(project.links).map(([key, url]) => 
-                        `<a href="${url}" class="project-link" target="_blank">${key.charAt(0).toUpperCase() + key.slice(1).replace('_', ' ')}</a>`
-                    ).join('')}
+                    ${Object.entries(project.links).map(([key, url]) => {
+                        const linkText = key === 'full_preview' ? 'Full Dashboard Preview' : 
+                                       key === 'sample_training' ? 'Sample Training Deck' :
+                                       key === 'research_brief' ? 'Research Brief' :
+                                       key === 'live_dashboard' ? 'Live Dashboard' :
+                                       key === 'published_paper' ? 'Published Paper' :
+                                       key.charAt(0).toUpperCase() + key.slice(1).replace('_', ' ');
+                        return `<a href="${url}" class="project-link" target="_blank">${linkText}</a>`;
+                    }).join('')}
                 </div>
             `;
 

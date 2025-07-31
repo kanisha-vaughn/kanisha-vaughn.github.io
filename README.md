@@ -152,3 +152,4 @@ Potential improvements for future versions:
 - [ ] Add Google Analytics tracking
 - [ ] SEO optimization
 
+
