@@ -434,6 +434,80 @@
             color: white;
         }
 
+        /* Contact Form Modal Styles */
+        .contact-form-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contact-form-wrapper {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .close-form-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            z-index: 1001;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .close-form-btn:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .contact-form-wrapper iframe {
+            border-radius: 5px;
+            margin-top: 10px;
+            max-width: 100%;
+            width: 100%;
+            height: 80vh;
+            max-height: 800px;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        /* Responsive adjustments for the form */
+        @media (max-width: 768px) {
+            .contact-form-wrapper {
+                padding: 15px;
+                margin: 10px;
+            }
+            
+            .contact-form-wrapper iframe {
+                height: 70vh;
+                width: 100%;
+            }
+        }
+
         /* Footer */
         footer {
             background: #333;
@@ -510,7 +584,7 @@
                     <br>
                     <p>My approach is rooted in a simple principle: break every problem down to its smallest components. Just like writing clean code, successful projects start with truly understanding what the client is trying to accomplish and why. Every project is a puzzle waiting to be solved, and I believe every puzzle has a solution. Whether you need to streamline operations, make sense of your data, or document complex processes, I'm here to help you turn challenges into opportunities for greater impact.</p>
                     <br>
-                    <p><a href="Contract Resume.pdf" target="_blank" style="color: var(--primary-blue); text-decoration: none; font-weight: 500;">View my full resume →</a></p>
+                    <p><a href="KV Consulting Resume.pdf" target="_blank" style="color: var(--primary-blue); text-decoration: none; font-weight: 500;">View my full resume →</a></p>
                 </div>
             </div>
         </div>
@@ -692,12 +766,27 @@
                 <h2 class="section-title">Get In Touch</h2>
                 <p>Ready to start your next project? I'd love to hear about your ideas and discuss how we can work together to bring them to life.</p>
                 
-                <a href="mailto:kanishav@alumni.cmu.edu?subject=Project Inquiry!" class="contact-button">
+                <button id="contactFormToggle" class="contact-button">
                     Send Message
-                </a>
+                </button>
+                
+                <div id="contactFormContainer" class="contact-form-container" style="display: none;">
+                    <div class="contact-form-wrapper">
+                        <button id="closeForm" class="close-form-btn">&times;</button>
+                        <iframe 
+                            src="https://docs.google.com/forms/d/e/1FAIpQLScUBo0anWBQux1UyXGGjdPoX8a8OILluha9KrpaaS9rt-R9HA/viewform?embedded=true" 
+                            width="640" 
+                            height="1950" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0">
+                            Loading…
+                        </iframe>
+                    </div>
+                </div>
                 
                 <p style="margin-top: 2rem;">
-                    Or reach me directly at: <strong>kanishav@alumni.cmu.edu</strong>
+                    Or reach me directly at: <strong>kanishav.consulting@gmail.com</strong>
                 </p>
             </div>
         </div>
@@ -874,6 +963,25 @@
             const modal = document.getElementById('projectModal');
             if (event.target === modal) {
                 modal.style.display = 'none';
+            }
+        });
+
+        // Contact Form Toggle Functionality
+        document.getElementById('contactFormToggle').addEventListener('click', function() {
+            document.getElementById('contactFormContainer').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        document.getElementById('closeForm').addEventListener('click', function() {
+            document.getElementById('contactFormContainer').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+
+        // Close form when clicking outside the form wrapper
+        document.getElementById('contactFormContainer').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
     </script>
